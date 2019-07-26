@@ -12,10 +12,6 @@ export class ConsultaDataService {
 	constructor(private api: ApiService) {
 	}
 
-	salvarConsultasDrive(consulta:Consulta): Observable<Consulta>{
-		return this.api.salvarConsultasDrive(consulta);
-	}
-
 	addConsulta(consulta: Consulta): Observable<Consulta> {
 		return this.api.createConsulta(consulta);
 	}

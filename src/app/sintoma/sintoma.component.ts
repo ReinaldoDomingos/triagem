@@ -154,11 +154,6 @@ export class SintomaComponent implements OnInit {
                 this.consultas = this.consultas.concat(consulta);
               }
               );
-            this.consultaDataService
-            .salvarConsultasDrive(consulta)
-            .subscribe(
-              (consulta) => {}
-              )
             this.abrirModal(2);
           }
 

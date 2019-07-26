@@ -9,7 +9,7 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/do';
 
 const API_URL = environment.apiUrl;
-const express = 'http://localhost:3001/salvar';
+
 @Injectable()
 export class ApiService {
 
@@ -35,16 +35,6 @@ export class ApiService {
 		})	
 		.catch(this.handleError);
 		return retorno
-	}
-
-	public salvarConsultasDrive(consulta: Consulta): Observable<Consulta> {
-		console.log("Chamou salvar")
-		return 	 this.http
-		.get('http://localhost:3001/salvar')		
-		.map(response => {
-			return new Consulta(response.json());
-		})
-		.catch(this.handleError);
 	}
 	
 
